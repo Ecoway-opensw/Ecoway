@@ -1,0 +1,134 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical|center_horizontal">
+
+    <TextView
+        android:id="@+id/title_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ecoway"
+        android:textColor="#000000"
+        android:textSize="35sp"
+        android:layout_gravity="start"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:id="@+id/login_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="회원가입"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="35sp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:id="@+id/bio_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:textAlignment="center"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/name_text"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="-130dp"
+                android:text="이름"
+                android:textColor="#000000"
+                android:textSize="25sp" />
+
+            <EditText
+                android:id="@+id/user_name"
+                android:layout_width="330dp"
+                android:layout_height="60dp"
+                android:hint="이름을 입력하세요"
+                android:padding="16dp"
+                android:background="@drawable/button_background" />
+
+            <TextView
+                android:id="@+id/num_text"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginTop="30dp"
+                android:text="전화번호"
+                android:layout_marginLeft="-110dp"
+                android:textColor="#000000"
+                android:textSize="25sp" />
+
+            <EditText
+                android:id="@+id/user_num"
+                android:layout_width="330dp"
+                android:layout_height="60dp"
+                android:hint="전화번호를 입력하세요"
+                android:padding="16dp"
+                android:background="@drawable/button_background" />
+
+            <TextView
+                android:id="@+id/id_text"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="-120dp"
+                android:text="아이디"
+                android:textColor="#000000"
+                android:textSize="25sp" />
+
+            <EditText
+                android:id="@+id/userid"
+                android:layout_width="330dp"
+                android:layout_height="60dp"
+                android:hint="아이디를 입력하세요"
+                android:padding="16dp"
+                android:background="@drawable/button_background" />
+
+            <TextView
+                android:id="@+id/pw_text"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="-110dp"
+                android:text="비밀번호"
+                android:textColor="#000000"
+                android:textSize="25sp" />
+
+            <EditText
+                android:id="@+id/userpw"
+                android:layout_width="330dp"
+                android:layout_height="60dp"
+                android:hint="비밀번호를 입력하세요"
+                android:padding="16dp"
+                android:background="@drawable/button_background" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/signup_button"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:text="회원가입"
+        android:layout_marginTop="5dp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        android:background="@drawable/round_rect" />
+
+
+
+
+</LinearLayout>

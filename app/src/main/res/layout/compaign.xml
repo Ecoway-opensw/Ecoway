@@ -17,7 +17,7 @@
         android:layout_marginStart="25dp"
         android:layout_marginTop="20dp" />
     <Button
-        android:id="@+id/reuse_button"
+        android:id="@+id/cambrand_button"
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:layout_marginLeft="16dp"

@@ -19,7 +19,7 @@
 
 
     <Button
-        android:id="@+id/reuse_button"
+        android:id="@+id/country_button"
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:layout_marginLeft="16dp"
@@ -28,7 +28,7 @@
         android:layout_weight="1"
         android:background="@drawable/button_background"
         android:gravity="left|center_vertical"
-        android:text="    재활용 방법\n"
+        android:text="국가 환경 캠페인\n"
         android:textColor="#000000"
         android:textSize="25sp"
         android:textStyle="bold"
@@ -39,14 +39,14 @@
         android:layout_height="50dp"/>
 
     <Button
-        android:id="@+id/rebrand_button"
+        android:id="@+id/region_button"
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:layout_margin="16dp"
         android:layout_weight="1"
         android:background="@drawable/button_background"
         android:gravity="left|center_vertical"
-        android:text="    리사이클 브랜드\n"
+        android:text="지자체 환경 캠페인\n"
         android:textSize="25sp"
         android:textStyle="bold"
         android:textColor="#000000"

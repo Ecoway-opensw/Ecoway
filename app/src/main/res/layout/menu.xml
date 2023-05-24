@@ -17,39 +17,47 @@
         android:layout_marginStart="25dp"
         android:layout_marginTop="20dp" />
 
-
     <Button
-        android:id="@+id/reuse_button"
+        android:id="@+id/login_button"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="90dp"
-        android:layout_marginRight="16dp"
-        android:layout_weight="1"
+        android:layout_height="80dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
         android:background="@drawable/button_background"
-        android:gravity="left|center_vertical"
-        android:text="    재활용 방법\n"
-        android:textColor="#000000"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        app:backgroundTint="#A9D998" />
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="50dp"/>
-
-    <Button
-        android:id="@+id/rebrand_button"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_margin="16dp"
-        android:layout_weight="1"
-        android:background="@drawable/button_background"
-        android:gravity="left|center_vertical"
-        android:text="    리사이클 브랜드\n"
+        android:text="로그인"
         android:textSize="25sp"
         android:textStyle="bold"
         android:textColor="#000000"
         app:backgroundTint="#A9D998" />
+
+    <Button
+        android:id="@+id/sign_button"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/button_background"
+        android:text="회원가입"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        app:backgroundTint="#A9D998" />
+
+    <Button
+        android:id="@+id/mypage_button"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/button_background"
+        android:text="마이페이지"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        app:backgroundTint="#A9D998" />
+
 
 </LinearLayout>
