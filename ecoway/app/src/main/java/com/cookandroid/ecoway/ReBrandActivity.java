@@ -1,26 +1,29 @@
 package com.cookandroid.ecoway;
 
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
+import androidx.fragment.app.Fragment;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.view.MenuItem;
-
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-
-public class ReBrandActivity extends AppCompatActivity{
+public class ReBrandActivity extends Fragment {
+    @Nullable
     @Override
-    protected void onCreate(Bundle savedInstanceState){
-        ActionBar actionBar = getSupportActionBar(); // 액션바 없애기
-        actionBar.hide(); // 액션바 없애기
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        setHasOptionsMenu(true);
+        View v = inflater.inflate(R.layout.rebrand, container, false);
+        ActionBar actionBar = ((MainActivity)getActivity()).getSupportActionBar();
+        actionBar.hide();
+        return v;
+    }
 
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.rebrand);
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
     }
 }

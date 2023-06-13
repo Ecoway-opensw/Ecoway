@@ -10,29 +10,64 @@ import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.ArrayList;
 
 public class HomeActivity extends Fragment {
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.home, container, false);
+    private final int Fragment_1 = 1;
+    private final int Fragment_2 = 2;
 
-        // 재활용 카테고리 선택으로 넘어가는 버튼이랑 연결
-        Button recyclecategoryBtn = view.findViewById(R.id.reuse_button);
-        recyclecategoryBtn.setOnClickListener(new View.OnClickListener() {
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState){
+        super.onCreate(savedInstanceState);
+
+        View v = inflater.inflate(R.layout.home,container,false);
+
+        Button RecyclingBtn= (Button)v.findViewById(R.id.recyclingbtn);
+        Button RebrandBtn=(Button)v.findViewById(R.id.rebrandbtn);
+        RecyclingBtn.setSelected(true);
+        RebrandBtn.setSelected(false);
+
+        RecyclingBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(getActivity(),recycCategoryActivity.class);
-                startActivity(intent);
+                FragmentView(Fragment_1);
+                RecyclingBtn.setSelected(true);
+                RebrandBtn.setSelected(false);
             }
         });
 
-        Button rebrandbtn = view.findViewById(R.id.rebrand_button);
-        rebrandbtn.setOnClickListener(new View.OnClickListener(){
+        RebrandBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v){
-                Intent intent = new Intent(getActivity(),ReBrandActivity.class);
-                getActivity().startActivity(intent);
+            public void onClick(View view) {
+                FragmentView(Fragment_2);
+                RecyclingBtn.setSelected(false);
+                RebrandBtn.setSelected(true);
             }
         });
-        return view;
+        FragmentView(Fragment_1);
+
+        return v;
     }
+
+    private void FragmentView(int fragment){
+        FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
+
+        switch (fragment){
+            case 1:
+                MainRecycleActivity fragment1 = new MainRecycleActivity();
+                transaction.replace(R.id.fragment_container, fragment1);
+                transaction.commit();
+                break;
+
+            case 2:
+                ReBrandActivity fragment2 = new ReBrandActivity();
+                transaction.replace(R.id.fragment_container, fragment2);
+                transaction.commit();
+                break;
+        }
+    }
+
 }

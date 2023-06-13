@@ -44,7 +44,7 @@ public class UnSubscribeActivity extends AppCompatActivity {
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(UnSubscribeActivity.this, MyPageActivity.class);
+                Intent intent = new Intent(UnSubscribeActivity.this, plusMenuActivity.class);
                 startActivity(intent);
             }
         });

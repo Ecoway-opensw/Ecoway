@@ -1,16 +1,21 @@
 package com.cookandroid.ecoway;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import android.os.Bundle;
 
-public class PwChangeActivity extends AppCompatActivity {
+public class recycDetail1Activity extends AppCompatActivity {
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState){
         ActionBar actionBar = getSupportActionBar(); // 액션바 없애기
         actionBar.hide(); // 액션바 없애기
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.change_pw);
+        setContentView(R.layout.recycle_detail1);
+
     }
 }

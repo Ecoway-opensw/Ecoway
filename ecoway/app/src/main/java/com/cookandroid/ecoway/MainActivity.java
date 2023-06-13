@@ -6,56 +6,51 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
 
 public class MainActivity extends AppCompatActivity {
-
-    private FragmentManager fragmentManager = getSupportFragmentManager();
+    private FragmentManager fragmentManager=getSupportFragmentManager();
     private HomeActivity fragmentHome = new HomeActivity();
-    private CompaignActivity fragmentCompaign = new CompaignActivity();
-    private plusMenuActivity fragmentPlus = new plusMenuActivity();
+    private CounCamActivity fragmentCampaign = new CounCamActivity();
+    private plusMenuActivity fragmentMypage = new plusMenuActivity();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
 
         FragmentTransaction transaction = fragmentManager.beginTransaction();
-        transaction.replace(R.id.frameLayout, fragmentHome).commitAllowingStateLoss();
-
-        BottomNavigationView bottomNavigationView = findViewById(R.id.navigationView);
+        transaction.replace(R.id.containers, fragmentHome).commitAllowingStateLoss();
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(new ItemSelectedListener());
-
     }
 
     class ItemSelectedListener implements BottomNavigationView.OnNavigationItemSelectedListener{
         @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-            FragmentTransaction transaction = fragmentManager.beginTransaction();
+        public boolean onNavigationItemSelected(@NonNull MenuItem menuItem){
+            FragmentTransaction transaction=fragmentManager.beginTransaction();
 
-            switch(menuItem.getItemId())
-            {
-                case R.id.homeItem:
-                    transaction.replace(R.id.frameLayout, fragmentHome).commitAllowingStateLoss();
-
+            switch (menuItem.getItemId()){
+                case R.id.home:
+                    transaction.replace(R.id.containers,fragmentHome).commitAllowingStateLoss();
                     break;
-                case R.id.compaignItem:
-                    transaction.replace(R.id.frameLayout, fragmentCompaign).commitAllowingStateLoss();
+                case R.id.eco:
+                    transaction.replace(R.id.containers,fragmentCampaign).commitAllowingStateLoss();
                     break;
-
-                case R.id.plusItem:
-                    transaction.replace(R.id.frameLayout, fragmentPlus).commitAllowingStateLoss();
+                case R.id.user:
+                    transaction.replace(R.id.containers,fragmentMypage).commitAllowingStateLoss();
                     break;
             }
             return true;
         }
     }
+
 }

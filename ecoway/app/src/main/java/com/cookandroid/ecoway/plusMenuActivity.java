@@ -15,36 +15,34 @@ import androidx.fragment.app.Fragment;
 
 public class plusMenuActivity extends Fragment {
 
+    public int flag =0;
+    public View view;
+
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.menu, container, false);
+        if(flag==0){
+            view = inflater.inflate(R.layout.menu, container, false);
 
-        Button loginButton = view.findViewById(R.id.login_button);
-        loginButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), LoginActivity.class);
-                getActivity().startActivity(intent);
-            }
-        });
+            Button loginButton = view.findViewById(R.id.login_button);
+            loginButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(getActivity(), LoginActivity.class);
+                    getActivity().startActivity(intent);
+                }
+            });
 
-        Button signButton = view.findViewById(R.id.sign_button);
-        signButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), SignActivity.class);
-                getActivity().startActivity(intent);
-            }
-        });
+            Button unSubscribeButton = view.findViewById(R.id.unsubscribe_btn);
+            unSubscribeButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(getActivity(), UnSubscribeActivity.class);
+                    getActivity().startActivity(intent);
+                }
+            });
 
-        Button myPageButton = view.findViewById(R.id.mypage_button);
-        myPageButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), MyPageActivity.class);
-                getActivity().startActivity(intent);
-            }
-        });
-
+        }else if(flag==1){
+            view = inflater.inflate(R.layout.home, container, false);
+        }
         return view;
     }
 }

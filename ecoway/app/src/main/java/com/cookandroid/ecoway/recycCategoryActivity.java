@@ -21,7 +21,34 @@ public class recycCategoryActivity extends AppCompatActivity {
         funitureBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(recycCategoryActivity.this,recycSmallCategoryActivity.class);
+                Intent intent=new Intent(recycCategoryActivity.this, recycDetail1Activity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button funitureBtn2 = findViewById(R.id.reuse_button2);
+        funitureBtn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(recycCategoryActivity.this, recycDetail2Activity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button funitureBtn3 = findViewById(R.id.reuse_button3);
+        funitureBtn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(recycCategoryActivity.this, recycDetail3Activity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button funitureBtn4 = findViewById(R.id.reuse_button4);
+        funitureBtn4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(recycCategoryActivity.this, recycDetail4Activity.class);
                 startActivity(intent);
             }
         });

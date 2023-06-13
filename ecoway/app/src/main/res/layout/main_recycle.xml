@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/main_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="580px">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="170dp"
+                android:layout_marginTop="50dp"
+                android:text="벽지"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="130dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="50dp"
+                android:background="@drawable/wallpaper" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="170dp"
+                android:layout_marginTop="50dp"
+                android:text="TV"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="130dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="50dp"
+                android:background="@drawable/tv" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="170dp"
+                android:layout_marginTop="50dp"
+                android:text="건전지"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="130dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="50dp"
+                android:background="@drawable/battery" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <View
+        android:layout_width="990px"
+        android:layout_height="1px"
+        android:layout_marginLeft="45px"
+        android:layout_marginTop="580px"
+        android:background="#404040"/>
+
+    <TextView
+        android:text="카테고리별 쓰레기"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="40px"
+        android:textStyle="bold"
+        android:layout_marginLeft="43px"
+        android:layout_marginTop="630px"
+        android:textColor="#000000"
+        />
+
+    <Button
+        android:id="@+id/mainrecycle_btn1"
+        android:text="가구/인테리어"
+        android:layout_width="479px"
+        android:layout_height="109px"
+        android:textColor="#FFFFFF"
+        android:textSize="30px"
+        android:layout_marginTop="730px"
+        android:layout_marginLeft="44px"
+        android:background="@drawable/recyclebtn_drawable"
+        />
+
+    <Button
+        android:id="@+id/mainrecycle_btn2"
+        android:text="가전제품"
+        android:layout_width="479px"
+        android:layout_height="109px"
+        android:textColor="#FFFFFF"
+        android:textSize="30px"
+        android:layout_marginTop="730px"
+        android:layout_marginLeft="556px"
+        android:background="@drawable/recyclebtn_drawable"
+        />
+
+    <Button
+        android:id="@+id/mainrecycle_btn3"
+        android:text="생활용품"
+        android:layout_width="479px"
+        android:layout_height="109px"
+        android:textColor="#FFFFFF"
+        android:textSize="30px"
+        android:layout_marginTop="867px"
+        android:layout_marginLeft="44px"
+        android:background="@drawable/recyclebtn_drawable"
+        />
+
+    <Button
+        android:id="@+id/mainrecycle_btn4"
+        android:text="욕실용품"
+        android:layout_width="479px"
+        android:layout_height="109px"
+        android:textColor="#FFFFFF"
+        android:textSize="30px"
+        android:layout_marginTop="867px"
+        android:layout_marginLeft="556px"
+        android:background="@drawable/recyclebtn_drawable"
+        />
+
+    <Button
+        android:id="@+id/mainrecycle_btn5"
+        android:text="주방용품"
+        android:layout_width="479px"
+        android:layout_height="109px"
+        android:textColor="#FFFFFF"
+        android:textSize="30px"
+        android:layout_marginTop="1004px"
+        android:layout_marginLeft="44px"
+        android:background="@drawable/recyclebtn_drawable"
+        />
+
+    <Button
+        android:id="@+id/mainrecycle_btn6"
+        android:text="식품"
+        android:layout_width="479px"
+        android:layout_height="109px"
+        android:textColor="#FFFFFF"
+        android:textSize="30px"
+        android:layout_marginTop="1004px"
+        android:layout_marginLeft="556px"
+        android:background="@drawable/recyclebtn_drawable"
+        />
+
+    <Button
+        android:id="@+id/mainrecycle_btn7"
+        android:text="용기/포장제"
+        android:layout_width="479px"
+        android:layout_height="109px"
+        android:textColor="#FFFFFF"
+        android:textSize="30px"
+        android:layout_marginTop="1140px"
+        android:layout_marginLeft="44px"
+        android:background="@drawable/recyclebtn_drawable"
+        />
+
+    <Button
+        android:id="@+id/mainrecycle_btn8"
+        android:text="패션/잡화"
+        android:layout_width="479px"
+        android:layout_height="109px"
+        android:textColor="#FFFFFF"
+        android:textSize="30px"
+        android:layout_marginTop="1140px"
+        android:layout_marginLeft="556px"
+        android:background="@drawable/recyclebtn_drawable"
+        />
+</FrameLayout>
